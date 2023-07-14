@@ -19,12 +19,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
+
 console.log("hello");
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 9000;
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect(process.env.MONGO_DB_SRV_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
