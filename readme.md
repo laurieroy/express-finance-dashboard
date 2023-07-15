@@ -12,7 +12,7 @@ Database: NoSQL Mongoose
 - totalProfit: currency
 - totalRevenue: currency
 - totalExpenses: currency
-- expensesByCategory:Map<string: currency> 
+- expensesByCategory: Map<string: currency> 
 - dailyData: Array
 - monthlyData: Array
 
