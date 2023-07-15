@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-
 import { loadType } from "mongoose-currency";
 
 const Schema = mongoose.Schema;
@@ -85,8 +84,8 @@ const KPISchema = new Schema(
         get: (v) => v / 100,
       },
     },
-    monthlyData: [],
-    dailyData: [],
+    monthlyData: [monthSchema],
+    dailyData: [daySchema],
   },
   { timestamps: true, toJSON: { getters: true } }
 );
