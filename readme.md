@@ -1,11 +1,12 @@
 # Finananseer backend
-Express server for Finanseer, built following a code along
+Express server for Finanseer, built following a [code along](https://www.youtube.com/watch?v=uoJ0Tv-BFcQ&t=8383s)
 
 ## Challenges
 Mongoose changed their API, so still figuring that out.
 
 Database: NoSQL Mongoose
 (simplified)
+
 ### Tables: 
 <!-- put into a table itself -->
  Key Performance Indicators
