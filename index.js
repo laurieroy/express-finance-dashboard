@@ -7,9 +7,11 @@ import dotenv from "dotenv";
 import helmet from "helmet";
 import kpiRoutes from "./routes/kpi.js";
 import productRoutes from "./routes/product.js";
+import transactionRoutes from "./routes/transaction.js";
 import KPI from "./models/KPI.js";
 import Product from "./models/Product.js";
-import { kpis, products } from "./data/data.js";
+import Transaction from "./models/Transaction.js";
+import { kpis, products, transactions } from "./data/data.js";
 
 /* CONFIGURATIONS */
 
@@ -27,6 +29,7 @@ app.use(cors());
 /* ROUTES */
 app.use("/kpi", kpiRoutes);
 app.use("/product", productRoutes);
+app.use("/transaction", transactionRoutes);
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 9000;
@@ -43,6 +46,7 @@ mongoose
     // console.log("Test db dropped")
     // KPI.insertMany(kpis);
     // Product.insertMany(products);
-    // console.log("Test db seeded")
+    Transaction.insertMany(transactions);
+    // console.log("Test db seeded");
   })
   .catch((error) => console.log(`${error} did not connect`));
