@@ -43,10 +43,13 @@ mongoose
 
     /* ADD DATA ONE TIME ONLY (or as needed) */
     // await mongoose.connection.db.dropDatabase();
-    // console.log("Test db dropped")
+    // console.log("Test db dropped");
     // KPI.insertMany(kpis);
+    // console.log("Add kpis");
     // Product.insertMany(products);
-    Transaction.insertMany(transactions);
+    // console.log("Add productss");
+    // Transaction.insertMany(transactions);
+    // console.log("Add transactions");
     // console.log("Test db seeded");
   })
   .catch((error) => console.log(`${error} did not connect`));
